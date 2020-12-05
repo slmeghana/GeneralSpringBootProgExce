@@ -11,7 +11,7 @@ stage("Execute sequencer file for Build and Deployment")
 {
 executeAnsiblePlaybookAsStages([playbookFile: sequencer_file, inventoryFile: hosts_file])
 }
-sequencer_file="ansible/sequencer.yml"
-hosts_file="GeneralSpringBootProgExce/ansible/hosts"
+sequencer_file="${jenkinsWorkspace}/GeneralSpringBootProgExce/ansible/sequencer.yml"
+hosts_file="${jenkinsWorkspace}/GeneralSpringBootProgExce/ansible/hosts"
 profile_type="${env.profile}"
 }
