@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - name: Download artifactory from nexus
+    maven_artifact:
+      group_id: hackathon-grp
+      artifact_id: hackathon-artifact
+      repository_url: 'http://20.55.56.232:8081/repo'
+      dest: /tmp/git/GeneralSpringBootProgExce/target/GeneralProgExec-2.0.0-SNAPSHOT.jar

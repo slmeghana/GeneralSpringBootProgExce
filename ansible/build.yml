@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - name: Build Application
+    command: mvn -f GeneralSpringBootProgExce/pom.xml clean package install
+    register: mvn_result
+
+  - name: mvn clean task output
+    debug:
+     var: mvn_result
+

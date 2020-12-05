@@ -13,4 +13,5 @@ executeAnsiblePlaybookAsStages([playbookFile: sequencer_file, inventoryFile: hos
 }
 sequencer_file="GeneralSpringBootProgExce/ansible/sequencer.yml"
 hosts_file="GeneralSpringBootProgExce/ansible/hosts"
+profile_type="${env.profile}"
 }

@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - name: Deploy to Nexus
+    command: mvn deploy:deploy-file -DgroupId=hackathon-grp -DartifactId=hackathon-artifact -Dversion=1.0 -Dpackaging=jar -Dfile=GeneralSpringBootProgExce/target/GeneralProgExec-2.0.0-SNAPSHOT.jar -DrepositoryId=settings.xml -Durl=http://20.55.56.232:8081/

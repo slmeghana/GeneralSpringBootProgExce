@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - name: Run Application
+    command: java -jar /tmp/git/GeneralSpringBootProgExce/target/GeneralProgExec-2.0.0-SNAPSHOT.jar
+
+

@@ -1,0 +1,23 @@
+type: sequencer
+version: 1
+sequence:
+- sequential:
+  - name: Build Application
+    playbook:
+    - import_playbook: ansible/build.yml
+      when: profile_type == "dev"
+  
+  - name: Download Artifact
+    playbook:
+    - import_playbook: ansible/download_artifact.yml
+      when: profile_type == "test"
+
+
+  - name: 
+    playbook:      
+    - import_playbook: ansible/run.yml
+
+  - name:
+    playbook:
+    - import_playbook: ansible/deploy.yml
+      when: profile_type == "dev"
